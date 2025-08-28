@@ -3,9 +3,12 @@ D:\UEprojects\ggwp\Source\CrossTheRoad\Public\CarActorGenerator.h
 D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\CarActorGenerator.generated.h
 D:\UEprojects\ggwp\Source\CrossTheRoad\Public\CarActor.h
 D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\CarActor.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Public\EngineUtils.h
 D:\UEprojects\ggwp\Source\CrossTheRoad\Public\RoadActor.h
 D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadActor.generated.h
 D:\UEprojects\ggwp\Source\CrossTheRoad\Public\SafeRoadActor.h
 D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\SafeRoadActor.generated.h
 D:\UEprojects\ggwp\Source\CrossTheRoad\Public\RoadGenerator.h
 D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadGenerator.generated.h
+D:\UEprojects\ggwp\Source\CrossTheRoad\Public\FinishZoneActor.h
+D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\FinishZoneActor.generated.h

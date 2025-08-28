@@ -21,12 +21,14 @@ struct FVector;
 #define ggwp_Source_CrossTheRoad_Public_CarActor_h_13_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execPlayerOverlap); \
+	DECLARE_FUNCTION(execRestartLevel); \
 	DECLARE_FUNCTION(execSetEndPoint);
 
 
 #define ggwp_Source_CrossTheRoad_Public_CarActor_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execPlayerOverlap); \
+	DECLARE_FUNCTION(execRestartLevel); \
 	DECLARE_FUNCTION(execSetEndPoint);
 
 

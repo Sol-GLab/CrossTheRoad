@@ -45,6 +45,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void SetEndPoint(FVector NewTarget);
 
+	// Timer before restart and restart function
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RestartTimer")
+	FTimerHandle Timer;
+
+	UFUNCTION()
+	void RestartLevel();
+
 	//Overlap event
 	UFUNCTION()
 	void PlayerOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,	const FHitResult& SweepResult);

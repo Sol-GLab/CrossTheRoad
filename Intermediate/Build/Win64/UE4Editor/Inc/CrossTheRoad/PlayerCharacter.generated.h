@@ -76,7 +76,6 @@ public: \
 
 
 #define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__IsMoving() { return STRUCT_OFFSET(APlayerCharacter, IsMoving); } \
 	FORCEINLINE static uint32 __PPO__Distance() { return STRUCT_OFFSET(APlayerCharacter, Distance); } \
 	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(APlayerCharacter, Speed); } \
 	FORCEINLINE static uint32 __PPO__EndLocation() { return STRUCT_OFFSET(APlayerCharacter, EndLocation); } \

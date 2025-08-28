@@ -2,7 +2,8 @@
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "PlayerCharacter.h"
-#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
+#include "EngineUtils.h" 
 
 // Sets default values
 ACarActor::ACarActor()
@@ -65,11 +66,35 @@ void ACarActor::Tick(float DeltaTime)
 // CarOverlap
 void ACarActor::PlayerOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,	const FHitResult& SweepResult)
 {
-	if (OtherActor && OtherActor->IsA(APlayerCharacter::StaticClass()))
+	// Disable controls
+	if (OtherActor && OtherActor->ActorHasTag("Player"))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Player hit by car!"));
-		UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, false);
+		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(OtherActor);
 
+		if (PlayerCharacter)
+		{
+			PlayerCharacter->IsMoving = true;
+			PlayerCharacter->SetActorTickEnabled(false);
+			
+			for (TActorIterator<ACarActor> CarItr(GetWorld()); CarItr; ++CarItr)
+			{
+				CarItr->SetActorTickEnabled(false);
+			}
+
+			UE_LOG(LogTemp, Warning, TEXT("Player hit by car!"));
+
+
+		}
+
+		// Timer before restart
+		GetWorldTimerManager().SetTimer(Timer, this, &ACarActor::RestartLevel, 3.0f, false);
 	}
+}
+
+// Restart level function
+void ACarActor::RestartLevel()
+{
+	UGameplayStatics::OpenLevel(GetWorld(), FName(*GetWorld()->GetName()));
+
 }
 

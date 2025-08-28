@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
 	DEFINE_FUNCTION(ACarActor::execPlayerOverlap)
 	{
@@ -35,6 +36,13 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->PlayerOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACarActor::execRestartLevel)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RestartLevel();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACarActor::execSetEndPoint)
@@ -50,6 +58,7 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 		UClass* Class = ACarActor::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "PlayerOverlap", &ACarActor::execPlayerOverlap },
+			{ "RestartLevel", &ACarActor::execRestartLevel },
 			{ "SetEndPoint", &ACarActor::execSetEndPoint },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -137,6 +146,28 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACarActor_RestartLevel_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarActor_RestartLevel_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CarActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarActor_RestartLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarActor, nullptr, "RestartLevel", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarActor_RestartLevel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarActor_RestartLevel_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACarActor_RestartLevel()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACarActor_RestartLevel_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ACarActor_SetEndPoint_Statics
 	{
 		struct CarActor_eventSetEndPoint_Parms
@@ -202,6 +233,10 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Speed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Speed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Timer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Timer;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -212,6 +247,7 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACarActor_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACarActor_PlayerOverlap, "PlayerOverlap" }, // 730772436
+		{ &Z_Construct_UFunction_ACarActor_RestartLevel, "RestartLevel" }, // 1929686814
 		{ &Z_Construct_UFunction_ACarActor_SetEndPoint, "SetEndPoint" }, // 2486304529
 	};
 #if WITH_METADATA
@@ -267,12 +303,22 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACarActor_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACarActor, Speed), METADATA_PARAMS(Z_Construct_UClass_ACarActor_Statics::NewProp_Speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACarActor_Statics::NewProp_Speed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACarActor_Statics::NewProp_Timer_MetaData[] = {
+		{ "Category", "RestartTimer" },
+		{ "Comment", "// Timer before restart and restart function\n" },
+		{ "ModuleRelativePath", "Public/CarActor.h" },
+		{ "ToolTip", "Timer before restart and restart function" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACarActor_Statics::NewProp_Timer = { "Timer", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACarActor, Timer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_ACarActor_Statics::NewProp_Timer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACarActor_Statics::NewProp_Timer_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACarActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACarActor_Statics::NewProp_CarMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACarActor_Statics::NewProp_CollisionBox,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACarActor_Statics::NewProp_EndPoint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACarActor_Statics::NewProp_HasPoint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACarActor_Statics::NewProp_Speed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACarActor_Statics::NewProp_Timer,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACarActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACarActor>::IsAbstract,
@@ -301,7 +347,7 @@ void EmptyLinkFunctionForGeneratedCodeCarActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACarActor, 2782566979);
+	IMPLEMENT_CLASS(ACarActor, 2806175531);
 	template<> CROSSTHEROAD_API UClass* StaticClass<ACarActor>()
 	{
 		return ACarActor::StaticClass();

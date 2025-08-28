@@ -44,9 +44,6 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void MoveLeft();
 
-	UPROPERTY()
-	bool IsMoving = false;
-
 	// Movement settings
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float Distance = 100.0f;
@@ -83,6 +80,10 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	// Check if movement is true
+	UPROPERTY()
+	bool IsMoving = false;
 
 	//Overlap for counter
 	UFUNCTION()

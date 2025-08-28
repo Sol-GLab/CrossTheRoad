@@ -12,5 +12,5 @@ class CROSSTHEROAD_API ACrossTheRoadGameModeBase : public AGameModeBase
 public:
 	// Sets default values 
 	ACrossTheRoadGameModeBase();
-	
+
 };

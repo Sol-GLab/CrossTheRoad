@@ -1,7 +1,9 @@
 #include "FinishZoneActor.h"
 #include "Components/BoxComponent.h"
 #include "PlayerCharacter.h"
-#include "Kismet/KismetSystemLibrary.h"
+#include "MyGameMode.h"
+#include "MyGameInstance.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AFinishZoneActor::AFinishZoneActor()
@@ -24,20 +26,61 @@ void AFinishZoneActor::BeginPlay()
 
 }
 
-// End Game when finish crossed
+// Restart when finish is crossed
 void AFinishZoneActor::EndGame(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-			if (OtherActor && OtherActor->ActorHasTag("Player"))
-				{
-					UE_LOG(LogTemp, Warning, TEXT("Finish reached!"));
-					UKismetSystemLibrary::QuitGame(this, nullptr, EQuitPreference::Quit, false);
-				}
+		UE_LOG(LogTemp, Warning, TEXT("Finish reached!"));
+					
+		// Disable controls
+		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(OtherActor);
+		if (PlayerCharacter)
+		{
+			PlayerCharacter->IsMoving = true;
+			PlayerCharacter->SetActorTickEnabled(false);
+
+			UE_LOG(LogTemp, Warning, TEXT("Player movement disabled!"));
+
+		}
+
+		//Function for level counter
+		AMyGameMode* MyGameMode = Cast<AMyGameMode>(UGameplayStatics::GetGameMode(this));
+
+		if (MyGameMode)
+		{
+			MyGameMode->NextLevel();
+
+		}
+
+		// Timer before restart
+		GetWorldTimerManager().SetTimer(Timer, this, &AFinishZoneActor::RestartLevel, 3.0f, false);
+
+		// Game end if win
+		if (!GetWorld() || GetWorld()->bIsTearingDown)
+		{
+			return;
+
+		}
+
+		UMyGameInstance* MyGameInstance = Cast<UMyGameInstance>(GetGameInstance());
+
+		if (MyGameInstance->CurrentLevel >= MyGameMode->LastLevel)
+		{
+			MyGameMode->EndGame();
+
+		}
 }
 
 // Called every frame
 void AFinishZoneActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+// Restart level function
+void AFinishZoneActor::RestartLevel()
+{
+	UGameplayStatics::OpenLevel(GetWorld(), FName(*GetWorld()->GetName()));
 
 }
 

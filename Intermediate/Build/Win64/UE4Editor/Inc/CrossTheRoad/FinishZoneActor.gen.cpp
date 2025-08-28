@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
 	DEFINE_FUNCTION(AFinishZoneActor::execEndGame)
 	{
@@ -35,11 +36,19 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 		P_THIS->EndGame(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AFinishZoneActor::execRestartLevel)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RestartLevel();
+		P_NATIVE_END;
+	}
 	void AFinishZoneActor::StaticRegisterNativesAFinishZoneActor()
 	{
 		UClass* Class = AFinishZoneActor::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "EndGame", &AFinishZoneActor::execEndGame },
+			{ "RestartLevel", &AFinishZoneActor::execRestartLevel },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -126,6 +135,28 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AFinishZoneActor_RestartLevel_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFinishZoneActor_RestartLevel_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/FinishZoneActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFinishZoneActor_RestartLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFinishZoneActor, nullptr, "RestartLevel", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFinishZoneActor_RestartLevel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFinishZoneActor_RestartLevel_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AFinishZoneActor_RestartLevel()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFinishZoneActor_RestartLevel_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AFinishZoneActor_NoRegister()
 	{
 		return AFinishZoneActor::StaticClass();
@@ -141,6 +172,10 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EndZoneCollision_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EndZoneCollision;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Timer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Timer;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -151,6 +186,7 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFinishZoneActor_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AFinishZoneActor_EndGame, "EndGame" }, // 855574283
+		{ &Z_Construct_UFunction_AFinishZoneActor_RestartLevel, "RestartLevel" }, // 20552887
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFinishZoneActor_Statics::Class_MetaDataParams[] = {
@@ -168,8 +204,18 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_EndZoneCollision = { "EndZoneCollision", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFinishZoneActor, EndZoneCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_EndZoneCollision_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_EndZoneCollision_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_Timer_MetaData[] = {
+		{ "Category", "RestartTimer" },
+		{ "Comment", "// Timer before restart and restart function\n" },
+		{ "ModuleRelativePath", "Public/FinishZoneActor.h" },
+		{ "ToolTip", "Timer before restart and restart function" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_Timer = { "Timer", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFinishZoneActor, Timer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_Timer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_Timer_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFinishZoneActor_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_EndZoneCollision,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFinishZoneActor_Statics::NewProp_Timer,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFinishZoneActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFinishZoneActor>::IsAbstract,
@@ -198,7 +244,7 @@ void EmptyLinkFunctionForGeneratedCodeFinishZoneActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFinishZoneActor, 1502972757);
+	IMPLEMENT_CLASS(AFinishZoneActor, 2045794251);
 	template<> CROSSTHEROAD_API UClass* StaticClass<AFinishZoneActor>()
 	{
 		return AFinishZoneActor::StaticClass();

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\CrossTheRoad.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A4D8D3B9-9E2A-4DD8-92DA-7F93CA0CE7BE}</UniqueIdentifier>
+      <UniqueIdentifier>{85CBCDEC-6C89-4403-855C-434FD2300D07}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CrossTheRoad.Target.cs">
       <Filter>Source</Filter>
@@ -11,15 +11,19 @@
     <None Include="..\..\Source\CrossTheRoadEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{29500523-7459-49B0-840C-4201067FE26F}</UniqueIdentifier>
+      <UniqueIdentifier>{87E1C901-541E-48FF-BAEA-09233DFC3C2E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEngine.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\CrossTheRoad">
-      <UniqueIdentifier>{8FCC5B7C-3643-4521-BFC7-6DC4A3B66486}</UniqueIdentifier>
+      <UniqueIdentifier>{49EA511A-11F7-4F41-87FB-B2C17E957C26}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CrossTheRoad\CrossTheRoad.Build.cs">
       <Filter>Source\CrossTheRoad</Filter>
@@ -37,7 +41,7 @@
       <Filter>Source\CrossTheRoad</Filter>
     </ClInclude>
     <Filter Include="Source\CrossTheRoad\Private">
-      <UniqueIdentifier>{CBF0D65D-1461-4EE6-9053-9B7C235273B4}</UniqueIdentifier>
+      <UniqueIdentifier>{08E07B9B-AC3D-458C-86F2-CE72A2DB79C0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\CrossTheRoad\Private\CarActor.cpp">
       <Filter>Source\CrossTheRoad\Private</Filter>
@@ -45,7 +49,16 @@
     <ClCompile Include="..\..\Source\CrossTheRoad\Private\CarActorGenerator.cpp">
       <Filter>Source\CrossTheRoad\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\CrossTheRoad\Private\EndlessGameMode.cpp">
+      <Filter>Source\CrossTheRoad\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\CrossTheRoad\Private\FinishZoneActor.cpp">
+      <Filter>Source\CrossTheRoad\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CrossTheRoad\Private\MyGameInstance.cpp">
+      <Filter>Source\CrossTheRoad\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CrossTheRoad\Private\MyGameMode.cpp">
       <Filter>Source\CrossTheRoad\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\CrossTheRoad\Private\PlayerCharacter.cpp">
@@ -61,7 +74,7 @@
       <Filter>Source\CrossTheRoad\Private</Filter>
     </ClCompile>
     <Filter Include="Source\CrossTheRoad\Public">
-      <UniqueIdentifier>{9F8D4BD1-734C-4823-8ACF-5F0328DCDDAA}</UniqueIdentifier>
+      <UniqueIdentifier>{9CE5B7BC-ECC1-490E-A9E6-723472291466}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\CrossTheRoad\Public\CarActor.h">
       <Filter>Source\CrossTheRoad\Public</Filter>
@@ -69,7 +82,16 @@
     <ClInclude Include="..\..\Source\CrossTheRoad\Public\CarActorGenerator.h">
       <Filter>Source\CrossTheRoad\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\CrossTheRoad\Public\EndlessGameMode.h">
+      <Filter>Source\CrossTheRoad\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\CrossTheRoad\Public\FinishZoneActor.h">
+      <Filter>Source\CrossTheRoad\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CrossTheRoad\Public\MyGameInstance.h">
+      <Filter>Source\CrossTheRoad\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CrossTheRoad\Public\MyGameMode.h">
       <Filter>Source\CrossTheRoad\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\CrossTheRoad\Public\PlayerCharacter.h">

@@ -5,6 +5,7 @@
 #include "FinishZoneActor.generated.h"
 
 class UBoxComponent;
+class APlayerCharacter;
 
 UCLASS()
 class CROSSTHEROAD_API AFinishZoneActor : public AActor
@@ -26,6 +27,13 @@ public:
 	// Collision box
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collision")
 	UBoxComponent* EndZoneCollision;
+
+	// Timer before restart and restart function
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RestartTimer")
+	FTimerHandle Timer;
+
+	UFUNCTION()
+	void RestartLevel();
 
 	// Overlap for endgame
 	UFUNCTION()

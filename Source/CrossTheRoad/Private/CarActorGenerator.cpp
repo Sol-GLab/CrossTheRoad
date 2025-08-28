@@ -1,9 +1,11 @@
 #include "CarActorGenerator.h"
 #include "CarActor.h"
 #include "Engine/World.h"
+#include "EngineUtils.h" 
 #include "RoadActor.h"
 #include "SafeRoadActor.h"
 #include "RoadGenerator.h"
+#include "FinishZoneActor.h"
 
 // Sets default values
 ACarActorGenerator::ACarActorGenerator()
@@ -30,6 +32,16 @@ void ACarActorGenerator::Tick(float DeltaTime)
 // Spawn Car Function
 void ACarActorGenerator::SpawnCars()
 {
+    // Check for stopped cars
+    for (TActorIterator<ACarActor> CarItr(GetWorld()); CarItr; ++CarItr)
+    {
+        if (!CarItr->IsActorTickEnabled())
+        {
+            return; 
+
+        }
+    }
+
     float SpeedBoost = 0.0f;
 
     if (RoadNumber)
