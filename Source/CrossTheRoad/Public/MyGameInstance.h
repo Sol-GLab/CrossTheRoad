@@ -4,9 +4,7 @@
 #include "Engine/GameInstance.h"
 #include "MyGameInstance.generated.h"
 
-/**
- * 
- */
+class UMainMenuWidget;
 UCLASS()
 class CROSSTHEROAD_API UMyGameInstance : public UGameInstance
 {
@@ -17,5 +15,12 @@ public:
 	//Level instance
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LevelCounter")
 	int32 CurrentLevel = 1;
+
+	// Widget
+	UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TSubclassOf<UMainMenuWidget> MainMenuWidget;
+
+	// Start function
+	virtual void OnStart() override;
 	
 };

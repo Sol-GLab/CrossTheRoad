@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 	CROSSTHEROAD_API UClass* Z_Construct_UClass_UMyGameInstance();
 	ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
 	UPackage* Z_Construct_UPackage__Script_CrossTheRoad();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	CROSSTHEROAD_API UClass* Z_Construct_UClass_UMainMenuWidget_NoRegister();
 // End Cross Module References
 	void UMyGameInstance::StaticRegisterNativesUMyGameInstance()
 	{
@@ -35,6 +37,10 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentLevel_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CurrentLevel;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MainMenuWidget_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_MainMenuWidget;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -45,7 +51,6 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyGameInstance_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "MyGameInstance.h" },
 		{ "ModuleRelativePath", "Public/MyGameInstance.h" },
 	};
@@ -59,8 +64,18 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_CurrentLevel = { "CurrentLevel", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyGameInstance, CurrentLevel), METADATA_PARAMS(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_CurrentLevel_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_CurrentLevel_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyGameInstance_Statics::NewProp_MainMenuWidget_MetaData[] = {
+		{ "Category", "UI" },
+		{ "Comment", "// Widget\n" },
+		{ "ModuleRelativePath", "Public/MyGameInstance.h" },
+		{ "ToolTip", "Widget" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp_MainMenuWidget = { "MainMenuWidget", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyGameInstance, MainMenuWidget), Z_Construct_UClass_UMainMenuWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_MainMenuWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyGameInstance_Statics::NewProp_MainMenuWidget_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyGameInstance_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_CurrentLevel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp_MainMenuWidget,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMyGameInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMyGameInstance>::IsAbstract,
@@ -89,7 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeMyGameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMyGameInstance, 579894748);
+	IMPLEMENT_CLASS(UMyGameInstance, 4030529113);
 	template<> CROSSTHEROAD_API UClass* StaticClass<UMyGameInstance>()
 	{
 		return UMyGameInstance::StaticClass();
