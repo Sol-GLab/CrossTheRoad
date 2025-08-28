@@ -39,5 +39,4 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "SpawnPoint")
 	USceneComponent* SpawnPointLeft;
 
-
 };

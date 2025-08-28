@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CROSSTHEROAD_CarActorGenerator_generated_h
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_SPARSE_DATA
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS_NO_PURE_DECLS \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_SPARSE_DATA
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACarActorGenerator(); \
 	friend struct Z_Construct_UClass_ACarActorGenerator_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ACarActorGenerator)
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesACarActorGenerator(); \
 	friend struct Z_Construct_UClass_ACarActorGenerator_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ACarActorGenerator)
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_STANDARD_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACarActorGenerator(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACarActorGenerator) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_ENHANCED_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACarActorGenerator(ACarActorGenerator&&); \
@@ -58,7 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACarActorGenerator)
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Car() { return STRUCT_OFFSET(ACarActorGenerator, Car); } \
 	FORCEINLINE static uint32 __PPO__RoadNumber() { return STRUCT_OFFSET(ACarActorGenerator, RoadNumber); } \
 	FORCEINLINE static uint32 __PPO__MinTime() { return STRUCT_OFFSET(ACarActorGenerator, MinTime); } \
@@ -66,27 +66,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__LastSpawn() { return STRUCT_OFFSET(ACarActorGenerator, LastSpawn); }
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_11_PROLOG
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_GENERATED_BODY_LEGACY \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_11_PROLOG
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_SPARSE_DATA \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_STANDARD_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_GENERATED_BODY \
+#define ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_SPARSE_DATA \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS_NO_PURE_DECLS \
-	CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h_15_ENHANCED_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_INCLASS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -94,7 +94,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> CROSSTHEROAD_API UClass* StaticClass<class ACarActorGenerator>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID CrossTheRoad_Source_CrossTheRoad_Public_CarActorGenerator_h
+#define CURRENT_FILE_ID ggwp_Source_CrossTheRoad_Public_CarActorGenerator_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

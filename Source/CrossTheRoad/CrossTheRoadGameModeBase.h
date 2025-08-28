@@ -10,6 +10,7 @@ class CROSSTHEROAD_API ACrossTheRoadGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+	// Sets default values 
 	ACrossTheRoadGameModeBase();
 	
 };

@@ -15,19 +15,48 @@ ARoadGenerator::ARoadGenerator()
 // Called when the game starts or when spawned
 void ARoadGenerator::BeginPlay()
 {
-	Super::BeginPlay();
-	
-	
+	Super::BeginPlay(); 
+    // Vars for road logic
+    int RoadCount = 0;
+    int SafeRoadCount = 0;
+
     for (int i = 0; i < NumberOfRoads; i++)
     {
-        // Logic for spawning roads (no more the 1 safe road in a row and no more then 3 roads in a row) 
-        // Should be here
+        // Logic for spawning roads (no more the 1 safe road in a row and no more then 4 roads in a row)
+        TSubclassOf<ARoadActor> RandomSpawn;
 
+        if (RoadCount >= 4)
+        {
+            RandomSpawn = SafeRoad;
 
+        }
 
-        //Roads randomiser
-        bool Random = FMath::RandBool();
-        TSubclassOf<ARoadActor> RandomSpawn = Random ? Road : SafeRoad;
+        else if(SafeRoadCount >= 1)
+        {
+            RandomSpawn = Road;
+
+        }
+
+        else
+        {
+            bool Random = FMath::RandBool();
+            RandomSpawn = Random ? Road : SafeRoad;
+
+        }
+
+        if (RandomSpawn == Road)
+        {
+            RoadCount++;
+            SafeRoadCount = 0;
+        }
+
+        else
+        {
+            SafeRoadCount++;
+            RoadCount = 0;
+
+        }
+
         ARoadActor* RoadsSpawn = nullptr;
 
         //Road Gen
@@ -39,7 +68,7 @@ void ARoadGenerator::BeginPlay()
 
         }
 
-        if (RoadsSpawn) 
+        if (RoadsSpawn)
         {
             RoadsCounter.Add(RoadsSpawn);
             UE_LOG(LogTemp, Warning, TEXT("Road Spawned!"));
@@ -50,9 +79,7 @@ void ARoadGenerator::BeginPlay()
             UE_LOG(LogTemp, Warning, TEXT("Road didn't spawn!"));
 
         }
-
     }
-
 }
 
 // Called every frame
@@ -61,4 +88,3 @@ void ARoadGenerator::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-

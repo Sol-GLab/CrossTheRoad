@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\UEprojects\\CrossTheRoad\\Source\\CrossTheRoad\\CrossTheRoad.Build.cs",
-		"D:\\UEprojects\\CrossTheRoad\\Source\\CrossTheRoad.Target.cs",
-		"D:\\UEprojects\\CrossTheRoad\\Source\\CrossTheRoadEditor.Target.cs"
+		"D:\\UEprojects\\ggwp\\Source\\CrossTheRoad\\CrossTheRoad.Build.cs",
+		"D:\\UEprojects\\ggwp\\Source\\CrossTheRoad.Target.cs",
+		"D:\\UEprojects\\ggwp\\Source\\CrossTheRoadEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }

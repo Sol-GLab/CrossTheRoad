@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CROSSTHEROAD_SafeRoadActor_generated_h
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_SPARSE_DATA
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS_NO_PURE_DECLS \
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_SPARSE_DATA
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASafeRoadActor(); \
 	friend struct Z_Construct_UClass_ASafeRoadActor_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ASafeRoadActor)
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS \
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesASafeRoadActor(); \
 	friend struct Z_Construct_UClass_ASafeRoadActor_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ASafeRoadActor)
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_STANDARD_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASafeRoadActor(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASafeRoadActor) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_ENHANCED_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASafeRoadActor() { }; \
 private: \
@@ -60,28 +60,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASafeRoadActor)
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_PRIVATE_PROPERTY_OFFSET
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_9_PROLOG
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_GENERATED_BODY_LEGACY \
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_PRIVATE_PROPERTY_OFFSET
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_9_PROLOG
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_PRIVATE_PROPERTY_OFFSET \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_SPARSE_DATA \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_STANDARD_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_GENERATED_BODY \
+#define ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_PRIVATE_PROPERTY_OFFSET \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_SPARSE_DATA \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS_NO_PURE_DECLS \
-	CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h_12_ENHANCED_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_INCLASS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -89,7 +89,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> CROSSTHEROAD_API UClass* StaticClass<class ASafeRoadActor>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID CrossTheRoad_Source_CrossTheRoad_Public_SafeRoadActor_h
+#define CURRENT_FILE_ID ggwp_Source_CrossTheRoad_Public_SafeRoadActor_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

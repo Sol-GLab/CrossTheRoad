@@ -1,2 +1,2 @@
-D:\UEprojects\CrossTheRoad\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
-D:\UEprojects\CrossTheRoad\Source\CrossTheRoad\CrossTheRoad.h
+D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
+D:\UEprojects\ggwp\Source\CrossTheRoad\CrossTheRoad.h

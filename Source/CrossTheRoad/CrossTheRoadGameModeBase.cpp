@@ -10,4 +10,7 @@ ACrossTheRoadGameModeBase::ACrossTheRoadGameModeBase()
 		DefaultPawnClass = PlayerBPClass.Class;
 
 	}
+
+	
 }
+

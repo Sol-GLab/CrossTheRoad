@@ -1,4 +1,4 @@
-#include "PlayerCharacter.h"
+﻿#include "PlayerCharacter.h"
 #include "CarActor.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -133,6 +133,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//　Movement and rotation
 	if (IsMoving)
 	{
 		// Movement
