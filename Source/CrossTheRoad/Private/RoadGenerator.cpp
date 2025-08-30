@@ -1,6 +1,7 @@
 #include "RoadGenerator.h"
 #include "RoadActor.h"
 #include "SafeRoadActor.h"
+#include "CarActor.h"
 #include "Engine/World.h"
 #include "Math/UnrealMathUtility.h"
 
@@ -15,11 +16,18 @@ ARoadGenerator::ARoadGenerator()
 // Called when the game starts or when spawned
 void ARoadGenerator::BeginPlay()
 {
-	Super::BeginPlay(); 
-    // Vars for road logic
-    int RoadCount = 0;
-    int SafeRoadCount = 0;
+	Super::BeginPlay();
 
+    LastSpawnedRoad = GetActorLocation();
+
+    RoadsGenerator();
+    NumberOfRoads = 1;
+
+}
+
+// Roads generator function
+void ARoadGenerator::RoadsGenerator()
+{
     for (int i = 0; i < NumberOfRoads; i++)
     {
         // Logic for spawning roads (no more the 1 safe road in a row and no more then 4 roads in a row)
@@ -31,7 +39,7 @@ void ARoadGenerator::BeginPlay()
 
         }
 
-        else if(SafeRoadCount >= 1)
+        else if (SafeRoadCount >= 1)
         {
             RandomSpawn = Road;
 
@@ -62,7 +70,7 @@ void ARoadGenerator::BeginPlay()
         //Road Gen
         if (RandomSpawn)
         {
-            FVector Location = GetActorLocation() + (Direction * Distance * i);
+            Location = LastSpawnedRoad + (Direction * Distance);
             FTransform Spawn(Location);
             RoadsSpawn = GetWorld()->SpawnActor<ARoadActor>(RandomSpawn, Spawn);
 
@@ -70,13 +78,26 @@ void ARoadGenerator::BeginPlay()
 
         if (RoadsSpawn)
         {
+            // Last spawned road location for endless generation
+            LastSpawnedRoad = Location;
+
             RoadsCounter.Add(RoadsSpawn);
             UE_LOG(LogTemp, Warning, TEXT("Road Spawned!"));
+
         }
 
         else
         {
             UE_LOG(LogTemp, Warning, TEXT("Road didn't spawn!"));
+
+        }
+
+        if (RoadsCounter.Num() > 15)
+        {
+            RoadsCounter[0]->Destroy();
+            RoadsCounter.RemoveAt(0);
+
+            UE_LOG(LogTemp, Warning, TEXT("Road is destroyed!"));
 
         }
     }

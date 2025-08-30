@@ -45,47 +45,53 @@ void ACarActorGenerator::SpawnCars()
     float SpeedBoost = 0.0f;
 
     if (RoadNumber)
-    {
+    {  
         for (ARoadActor* Road : RoadNumber->RoadsCounter)
         {
-            if (!Road || Road->IsA(ASafeRoadActor::StaticClass()))
+                if (!Road || Road->IsA(ASafeRoadActor::StaticClass()))
                 continue;
 
-            // Spawn Side
-            bool FirstSpawn;
-            if (LastSpawn.Contains(Road))
-            {
-                FirstSpawn = LastSpawn[Road];
-            }
-            else
-            {
-                FirstSpawn = FMath::RandBool();
-                LastSpawn.Add(Road, FirstSpawn);
-            }
-
-            USceneComponent* SpawnPoint = FirstSpawn ? Road->SpawnPointLeft : Road->SpawnPointRight;
-            USceneComponent* EndPoint = FirstSpawn ? Road->SpawnPointRight : Road->SpawnPointLeft;
-
-            if (SpawnPoint && Car)
-            {
-                FVector Location = SpawnPoint->GetComponentLocation();
-                FTransform Spawn(Location);
-                ACarActor* CarsSpawn = GetWorld()->SpawnActor<ACarActor>(Car, Spawn);
-
-                if (CarsSpawn)
+                // Spawn Side
+                bool FirstSpawn;
+                if (LastSpawn.Contains(Road))
                 {
-                    CarsSpawn->SetEndPoint(EndPoint->GetComponentLocation());
-                    CarsSpawn->Speed += SpeedBoost;
+                    FirstSpawn = LastSpawn[Road];
+
                 }
 
-                UE_LOG(LogTemp, Warning, TEXT("Cars Spawned!"));
-            }
-            else
-            {
-                UE_LOG(LogTemp, Warning, TEXT("Cars didn't spawn"));
-            }
+                else
+                {
+                    FirstSpawn = FMath::RandBool();
+                    LastSpawn.Add(Road, FirstSpawn);
 
-            SpeedBoost += 50.0f;
+                }
+
+                USceneComponent* SpawnPoint = FirstSpawn ? Road->SpawnPointLeft : Road->SpawnPointRight;
+                USceneComponent* EndPoint = FirstSpawn ? Road->SpawnPointRight : Road->SpawnPointLeft;
+
+                if (SpawnPoint && Car)
+                {
+                    FVector Location = SpawnPoint->GetComponentLocation();
+                    FTransform Spawn(Location);
+                    ACarActor* CarsSpawn = GetWorld()->SpawnActor<ACarActor>(Car, Spawn);
+
+                    if (CarsSpawn)
+                    {
+                        CarsSpawn->SetEndPoint(EndPoint->GetComponentLocation());
+                        CarsSpawn->Speed += SpeedBoost;
+
+                    }
+
+                    UE_LOG(LogTemp, Warning, TEXT("Cars Spawned!"));
+                }
+
+                else
+                {
+                    UE_LOG(LogTemp, Warning, TEXT("Cars didn't spawn"));
+
+                }  
+
+                SpeedBoost += 50.0f;
         }
     }
 

@@ -1,9 +1,11 @@
 ﻿#include "PlayerCharacter.h"
 #include "CarActor.h"
+#include "RoadGenerator.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "KisMet/GameplayStatics.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -38,6 +40,8 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	RotationSpeed = 90.f * Speed / Distance;
+
+	OverlapGeneration = Cast<ARoadGenerator>(UGameplayStatics::GetActorOfClass(GetWorld(), ARoadGenerator::StaticClass()));
 	
 }
 
@@ -163,7 +167,10 @@ void APlayerCharacter::Tick(float DeltaTime)
 // Overlap Function for counting roads
 void APlayerCharacter::RoadTouch(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if (!IsValid(OverlapGeneration)) return;
+
 	UE_LOG(LogTemp, Warning, TEXT("Road is touched"));
+	OverlapGeneration->RoadsGenerator();
 
 }
 

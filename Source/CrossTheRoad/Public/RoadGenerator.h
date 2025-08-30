@@ -6,6 +6,8 @@
 
 class ARoadActor;
 class ASafeRoadActor;
+class ARoadGenerator;
+class ACarActor;
 
 UCLASS()
 class CROSSTHEROAD_API ARoadGenerator : public AActor
@@ -31,6 +33,15 @@ protected:
 	FVector Direction;
 
 	// Roads variables should be here
+	UPROPERTY()
+	int RoadCount = 0;
+
+	UPROPERTY()
+	int SafeRoadCount = 0;
+
+	// First and last spawned road locations
+	FVector Location;
+	FVector LastSpawnedRoad;
 
 	
 public:	
@@ -47,5 +58,9 @@ public:
 	//Roads counter
 	UPROPERTY()
 	TArray<ARoadActor*> RoadsCounter;
+
+	//Roads generation funcion
+	UFUNCTION()
+	void RoadsGenerator();
 
 };

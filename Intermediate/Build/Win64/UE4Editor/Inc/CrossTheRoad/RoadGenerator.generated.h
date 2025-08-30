@@ -13,10 +13,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CROSSTHEROAD_RoadGenerator_generated_h
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_SPARSE_DATA
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_RPC_WRAPPERS
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_INCLASS_NO_PURE_DECLS \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_SPARSE_DATA
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRoadsGenerator);
+
+
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRoadsGenerator);
+
+
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARoadGenerator(); \
 	friend struct Z_Construct_UClass_ARoadGenerator_Statics; \
@@ -25,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(ARoadGenerator)
 
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_INCLASS \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesARoadGenerator(); \
 	friend struct Z_Construct_UClass_ARoadGenerator_Statics; \
@@ -34,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(ARoadGenerator)
 
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_STANDARD_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ARoadGenerator(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARoadGenerator) \
@@ -47,7 +55,7 @@ private: \
 public:
 
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_ENHANCED_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ARoadGenerator(ARoadGenerator&&); \
@@ -58,33 +66,35 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ARoadGenerator)
 
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_PRIVATE_PROPERTY_OFFSET \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__NumberOfRoads() { return STRUCT_OFFSET(ARoadGenerator, NumberOfRoads); } \
 	FORCEINLINE static uint32 __PPO__Distance() { return STRUCT_OFFSET(ARoadGenerator, Distance); } \
-	FORCEINLINE static uint32 __PPO__Direction() { return STRUCT_OFFSET(ARoadGenerator, Direction); }
+	FORCEINLINE static uint32 __PPO__Direction() { return STRUCT_OFFSET(ARoadGenerator, Direction); } \
+	FORCEINLINE static uint32 __PPO__RoadCount() { return STRUCT_OFFSET(ARoadGenerator, RoadCount); } \
+	FORCEINLINE static uint32 __PPO__SafeRoadCount() { return STRUCT_OFFSET(ARoadGenerator, SafeRoadCount); }
 
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_10_PROLOG
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_GENERATED_BODY_LEGACY \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_12_PROLOG
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_PRIVATE_PROPERTY_OFFSET \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_SPARSE_DATA \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_RPC_WRAPPERS \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_INCLASS \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_STANDARD_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_RPC_WRAPPERS \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_INCLASS \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_GENERATED_BODY \
+#define ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_PRIVATE_PROPERTY_OFFSET \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_SPARSE_DATA \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_INCLASS_NO_PURE_DECLS \
-	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_13_ENHANCED_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_INCLASS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_RoadGenerator_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -7,6 +7,7 @@
 class UCameraComponent;
 class USpringArmComponent;
 class UStaticMeshComponent;
+class ARoadGenerator;
 
 UCLASS()
 class CROSSTHEROAD_API APlayerCharacter : public ACharacter
@@ -73,6 +74,10 @@ protected:
 	// Mesh
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, category = "Mesh")
 	UStaticMeshComponent* PlayerMesh;
+
+	// Endless Road Generator
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EndlessRoad")
+	ARoadGenerator* OverlapGeneration;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

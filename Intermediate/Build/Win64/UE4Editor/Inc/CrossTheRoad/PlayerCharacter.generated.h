@@ -16,8 +16,8 @@ struct FHitResult;
 #endif
 #define CROSSTHEROAD_PlayerCharacter_generated_h
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_SPARSE_DATA
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_RPC_WRAPPERS \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_SPARSE_DATA
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execRoadTouch); \
 	DECLARE_FUNCTION(execMoveLeft); \
@@ -25,7 +25,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execMoveForward);
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execRoadTouch); \
 	DECLARE_FUNCTION(execMoveLeft); \
@@ -33,7 +33,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execMoveForward);
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_INCLASS_NO_PURE_DECLS \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_INCLASS \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -51,7 +51,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_STANDARD_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APlayerCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerCharacter) \
@@ -64,7 +64,7 @@ private: \
 public:
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_ENHANCED_CONSTRUCTORS \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerCharacter(APlayerCharacter&&); \
@@ -75,7 +75,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APlayerCharacter)
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Distance() { return STRUCT_OFFSET(APlayerCharacter, Distance); } \
 	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(APlayerCharacter, Speed); } \
 	FORCEINLINE static uint32 __PPO__EndLocation() { return STRUCT_OFFSET(APlayerCharacter, EndLocation); } \
@@ -84,30 +84,31 @@ public: \
 	FORCEINLINE static uint32 __PPO__Angle() { return STRUCT_OFFSET(APlayerCharacter, Angle); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(APlayerCharacter, SpringArm); } \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(APlayerCharacter, Camera); } \
-	FORCEINLINE static uint32 __PPO__PlayerMesh() { return STRUCT_OFFSET(APlayerCharacter, PlayerMesh); }
+	FORCEINLINE static uint32 __PPO__PlayerMesh() { return STRUCT_OFFSET(APlayerCharacter, PlayerMesh); } \
+	FORCEINLINE static uint32 __PPO__OverlapGeneration() { return STRUCT_OFFSET(APlayerCharacter, OverlapGeneration); }
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_11_PROLOG
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_GENERATED_BODY_LEGACY \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_12_PROLOG
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_SPARSE_DATA \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_RPC_WRAPPERS \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_INCLASS \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_STANDARD_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_RPC_WRAPPERS \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_INCLASS \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_GENERATED_BODY \
+#define ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_SPARSE_DATA \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_INCLASS_NO_PURE_DECLS \
-	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_14_ENHANCED_CONSTRUCTORS \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_SPARSE_DATA \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
+	ggwp_Source_CrossTheRoad_Public_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
