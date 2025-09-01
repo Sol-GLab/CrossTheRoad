@@ -1,0 +1,5 @@
+D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
+D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\UEprojects\ggwp\Source\CrossTheRoad/Public/PlayerCameraActor.h
+D:\UEprojects\ggwp\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\PlayerCameraActor.generated.h

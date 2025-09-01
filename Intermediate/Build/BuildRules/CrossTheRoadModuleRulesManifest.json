@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\UEprojects\\KeepOnRollin\\CrossTheRoad-main\\CrossTheRoad-main\\Source\\CrossTheRoad\\CrossTheRoad.Build.cs",
+		"D:\\UEprojects\\KeepOnRollin\\CrossTheRoad-main\\CrossTheRoad-main\\Source\\CrossTheRoad.Target.cs",
+		"D:\\UEprojects\\KeepOnRollin\\CrossTheRoad-main\\CrossTheRoad-main\\Source\\CrossTheRoadEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
