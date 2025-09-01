@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{37C57C86-CEF6-4FF3-B1BA-42170D0BF907}</ProjectGuid>
+    <ProjectGuid>{8B809700-B5FF-4F08-B3FB-CF8F12E681CB}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>CrossTheRoad</RootNamespace>
     <PlatformToolset>v143</PlatformToolset>
@@ -279,6 +279,7 @@
     <None Include="..\..\.gitattributes"/>
     <None Include="..\..\.gitignore"/>
     <None Include="..\..\Temp.txt"/>
+    <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\CrossTheRoad\CrossTheRoad.Build.cs"/>

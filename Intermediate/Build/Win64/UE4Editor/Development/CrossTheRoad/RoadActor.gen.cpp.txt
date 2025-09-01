@@ -1,5 +1,0 @@
-D:\UEprojects\KeepOnRollin\CrossTheRoad-main\CrossTheRoad-main\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
-D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\UEprojects\KeepOnRollin\CrossTheRoad-main\CrossTheRoad-main\Source\CrossTheRoad/Public/RoadActor.h
-D:\UEprojects\KeepOnRollin\CrossTheRoad-main\CrossTheRoad-main\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadActor.generated.h

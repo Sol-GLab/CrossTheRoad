@@ -1,2 +1,0 @@
-D:\UEprojects\KeepOnRollin\CrossTheRoad-main\CrossTheRoad-main\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
-D:\UEprojects\KeepOnRollin\CrossTheRoad-main\CrossTheRoad-main\Source\CrossTheRoad\CrossTheRoad.h

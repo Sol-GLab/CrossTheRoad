@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "CrossTheRoad",
-			"Path": "D:\\UEprojects\\KeepOnRollin\\CrossTheRoad-main\\CrossTheRoad-main\\Source\\CrossTheRoad.Target.cs",
+			"Path": "D:\\UEprojects\\test\\Source\\CrossTheRoad.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "CrossTheRoadEditor",
-			"Path": "D:\\UEprojects\\KeepOnRollin\\CrossTheRoad-main\\CrossTheRoad-main\\Source\\CrossTheRoadEditor.Target.cs",
+			"Path": "D:\\UEprojects\\test\\Source\\CrossTheRoadEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
