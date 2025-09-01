@@ -1,0 +1,2 @@
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
+D:\UEprojects\test\Source\CrossTheRoad\CrossTheRoad.h

@@ -25,6 +25,18 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "RoadMesh")
 	UStaticMeshComponent* RoadMesh;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Wall")
+	UStaticMeshComponent* WallMesh1;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Wall")
+	UStaticMeshComponent* WallMesh2;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "CollisionBox")
+	UBoxComponent* Wall1Collision;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "CollisionBox")
+	UBoxComponent* Wall2Collision;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "CollisionBox")
 	UBoxComponent* CollisionBox;
 

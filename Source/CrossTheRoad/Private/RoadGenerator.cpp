@@ -31,10 +31,10 @@ void ARoadGenerator::RoadsGenerator()
 {
     for (int i = 0; i < NumberOfRoads; i++)
     {
-        // Logic for spawning roads (no more the 1 safe road in a row and no more then 4 roads in a row)
+        // Logic for spawning roads (no more the 1 safe road in a row and no more then 3 roads in a row)
         TSubclassOf<ARoadActor> RandomSpawn;
 
-        if (RoadCount >= 4)
+        if (RoadCount >= 3)
         {
             RandomSpawn = SafeRoad;
 

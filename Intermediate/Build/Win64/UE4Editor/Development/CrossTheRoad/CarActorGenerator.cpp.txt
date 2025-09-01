@@ -1,0 +1,12 @@
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\CarActorGenerator.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\CarActorGenerator.generated.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\CarActor.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\CarActor.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Public\EngineUtils.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\RoadActor.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadActor.generated.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\SafeRoadActor.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\SafeRoadActor.generated.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\RoadGenerator.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadGenerator.generated.h

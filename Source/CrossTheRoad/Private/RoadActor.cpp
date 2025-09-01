@@ -14,6 +14,20 @@ ARoadActor::ARoadActor()
 	RoadMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RoadMesh"));
 	RootComponent = RoadMesh;
 
+	// Basic Mesh
+	WallMesh1 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WallMesh1"));
+	WallMesh1->SetupAttachment(RoadMesh);
+
+	Wall1Collision = CreateDefaultSubobject<UBoxComponent>(TEXT("Wall1Collision"));
+	Wall1Collision->SetupAttachment(WallMesh1);
+
+	// Basic Mesh
+	WallMesh2 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WallMesh2"));
+	WallMesh2->SetupAttachment(RoadMesh);
+
+	Wall2Collision = CreateDefaultSubobject<UBoxComponent>(TEXT("Wall2Collision"));
+	Wall2Collision->SetupAttachment(WallMesh2);
+
 	// Collision box
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
 	CollisionBox->SetupAttachment(RoadMesh);

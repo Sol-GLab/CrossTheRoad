@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8B809700-B5FF-4F08-B3FB-CF8F12E681CB}</ProjectGuid>
+    <ProjectGuid>{73B2B5DB-471F-4081-9818-DA6F560F8AD3}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>CrossTheRoad</RootNamespace>
     <PlatformToolset>v143</PlatformToolset>

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\CrossTheRoad.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{44753D68-81E8-47FF-B25A-D8BE1762F08B}</UniqueIdentifier>
+      <UniqueIdentifier>{06031EC6-0A76-4CA4-9479-64483221D303}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CrossTheRoad.Target.cs">
       <Filter>Source</Filter>
@@ -15,7 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\Temp.txt" />
     <Filter Include="Config">
-      <UniqueIdentifier>{71E6EF1C-2206-4FB3-B99E-664C43802B43}</UniqueIdentifier>
+      <UniqueIdentifier>{7ABED7ED-B810-4943-AE68-C05EFC316907}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\CrossTheRoad">
-      <UniqueIdentifier>{E91AABD3-0A35-4B57-8617-E54D61B713D5}</UniqueIdentifier>
+      <UniqueIdentifier>{59538870-04EB-4A77-A7B8-C8EA90E5C2DD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\CrossTheRoad\CrossTheRoad.Build.cs">
       <Filter>Source\CrossTheRoad</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\CrossTheRoad</Filter>
     </ClInclude>
     <Filter Include="Source\CrossTheRoad\Private">
-      <UniqueIdentifier>{1450A62D-6E41-4450-BD2A-7595989D24A7}</UniqueIdentifier>
+      <UniqueIdentifier>{ACAE8E7B-751A-4BBA-A703-AFEACE35D9B9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\CrossTheRoad\Private\CarActor.cpp">
       <Filter>Source\CrossTheRoad\Private</Filter>
@@ -87,7 +87,7 @@
       <Filter>Source\CrossTheRoad\Private</Filter>
     </ClCompile>
     <Filter Include="Source\CrossTheRoad\Public">
-      <UniqueIdentifier>{91E29039-E5DB-48F8-9578-52A606B3C62B}</UniqueIdentifier>
+      <UniqueIdentifier>{8912EC4A-9B71-4DC4-977E-1511CF3A72EF}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\CrossTheRoad\Public\CarActor.h">
       <Filter>Source\CrossTheRoad\Public</Filter>

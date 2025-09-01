@@ -1,0 +1,7 @@
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\RoadActor.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadActor.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h

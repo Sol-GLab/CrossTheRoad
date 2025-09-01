@@ -22,8 +22,6 @@ ACarActor::ACarActor()
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
 	CollisionBox->SetupAttachment(CarMesh);
 
-
-
 	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &ACarActor::PlayerOverlap);
 
 }

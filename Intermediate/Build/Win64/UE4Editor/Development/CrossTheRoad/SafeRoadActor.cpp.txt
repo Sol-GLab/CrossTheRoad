@@ -1,0 +1,5 @@
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Development\CrossTheRoad\Definitions.CrossTheRoad.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\SafeRoadActor.h
+D:\UEprojects\test\Source\CrossTheRoad\Public\RoadActor.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\RoadActor.generated.h
+D:\UEprojects\test\Intermediate\Build\Win64\UE4Editor\Inc\CrossTheRoad\SafeRoadActor.generated.h
